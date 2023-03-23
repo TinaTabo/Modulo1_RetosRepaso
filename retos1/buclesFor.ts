@@ -43,6 +43,9 @@ function add(myWords:string[]) {
     return sum;
 }
 
+//-- Exportar funcion add
+export {add};
+
 
 //-- Pruebas
 console.log(`-----Funcion-evenNumbers-----`);

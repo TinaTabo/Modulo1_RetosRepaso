@@ -71,6 +71,8 @@ function isEven(number:number) {
     }
 }
 
+//-- Exportar funcion isEven
+export {isEven};
 
 //-- Pruebas
 let dia:number = 5;
