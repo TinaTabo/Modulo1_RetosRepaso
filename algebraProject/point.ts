@@ -56,4 +56,20 @@ export class Point{
         }
         return quadrant;
     }
+
+    calculateNearest(points: Point[]):Point{
+        let idx:number = 0;
+        let dist:number = 0;
+        let aux:number = 0;
+        for (let i:number = 0; i < points.length; i++) {
+            //-- Calcular la distancia entre el punto y los puntos del array
+            dist = this.calculateDistance(points[i]);
+            //-- Guardar el indice del punto q esta a menor distancia.
+            if (dist < aux) {
+                idx = i;
+            }
+            aux = dist;
+        }
+        return points[idx]
+    }
 }

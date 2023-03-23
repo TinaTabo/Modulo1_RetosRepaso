@@ -40,3 +40,12 @@ console.log(`El punto ${cuadr4.toString()} esta en el cuadrante: ${cuadr4.calcul
 console.log(`El punto ${eje.toString()} esta en el cuadrante: ${eje.calcularQuadrant()}`);
 
 console.log(`------------------------------------------`);
+
+let point1:Point = new Point(1,1);
+let point2:Point = new Point(2,2);
+let point3:Point = new Point(3,3);
+let point4:Point = new Point(4,4);
+let points:Point[] = [point4,point3,point2];
+console.log(`El punto mas cercano del array al punto ${point1.toString()} es el punto: ${point1.calculateNearest(points)}`);
+
+console.log(`------------------------------------------`);
