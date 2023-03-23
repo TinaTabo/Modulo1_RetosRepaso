@@ -39,4 +39,21 @@ export class Point{
     calculateDistance(anotherPoint:Point):number{
         return Math.sqrt(Math.pow((this.x - anotherPoint.x),2) + Math.pow((this.y - anotherPoint.y),2));
     }
+
+    calcularQuadrant():number{
+        let quadrant:number = 0;
+        if (this.x > 0 && this.y > 0) {
+            quadrant = 1;
+        }
+        if (this.x < 0 && this.y > 0) {
+            quadrant = 2;
+        }
+        if (this.x < 0 && this.y < 0) {
+            quadrant = 3;
+        }
+        if (this.x > 0 && this.y < 0) {
+            quadrant = 4;
+        }
+        return quadrant;
+    }
 }
