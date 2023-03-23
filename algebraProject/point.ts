@@ -31,4 +31,12 @@ export class Point{
     toString():string{
         return `(${this.x},${this.y})`;
     }
+
+    distanceToIOrigin():number{
+        return Math.sqrt(Math.pow(this.x,2) + Math.pow(this.y,2));
+    }
+
+    calculateDistance(anotherPoint:Point):number{
+        return Math.sqrt(Math.pow((this.x - anotherPoint.x),2) + Math.pow((this.y - anotherPoint.y),2));
+    }
 }
